@@ -201,7 +201,10 @@ iframe {
   display: block;
   padding: 10px;
 }
-
+.pretitle {
+  text-align: center;
+  color: #000;
+}
 /* フッター
 ------------------------------- */
 .page-footer {
