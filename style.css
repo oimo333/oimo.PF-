@@ -34,6 +34,33 @@ img {
   /* height: 400px; */
   margin-top: 10%;
 }
+
+/* Sample素材横並び */
+/* 親グリッドを押し広げない安全枠 */
+.sample-area-wrap {
+  max-width: 650px;   /* ← ここが重要：横幅を固定して下のグリッドと無関係に */
+  margin: 0 auto 40px auto;
+}
+
+/* 画像とリスト横並び */
+.sample-area {
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+}
+
+/* 画像は小さめ＋固定サイズ */
+.sample-image {
+  width: 160px;
+  flex-shrink: 0;   /* 画像が潰れずレイアウトが崩れない */
+}
+
+/* リスト */
+.sample-list h2 {
+  margin-top: 0;
+}
+
+
 /* 見出し */
 .font-english {
   font-family: "Philosopher", sans-serif;
@@ -181,6 +208,7 @@ iframe {
 ------------------------------- */
 .grid {
   display: grid;
+  margin: 15px;
   gap: 2rem 1.5rem;
   grid-template-columns: repeat(3, 1fr);
   text-align: center;
