@@ -22,6 +22,8 @@
 
     <!-- オリジナルCSS -->
     <link rel="stylesheet" href="style.css" />
+
+
   </head>
 
   <body id="top" class="dt">
@@ -43,9 +45,9 @@
     </div>
 
     <!-- Listにしたプロフィール -->
-    <div class="profile-container" style="margin-top: -50px">
+    <div class="profile-container">
       <img class="rogo1" src="images/Profileロゴ.png" alt="プロフィールロゴ" />
-      <div class="table-container" style="margin-top: 20px">
+      <div class="table-container">
         <table class="table font-english">
           <tr>
             <th>Date</th>
@@ -64,7 +66,9 @@
             <td>
               <h5>
                 Photoshop/Illustrator/<br />
-                PremierePro/HTML.CSS
+                PremierePro/HTML.CSS/<br />
+                Office<br />
+                (Word,PowerPoint,Excel,VBA)
               </h5>
             </td>
           </tr>
@@ -86,18 +90,85 @@
     <br>kindleで販売している私の作成テキスト『初めてのPremierePro動画編集』のサンプルは<br />
     こちらから取得してください。</p>
    
+    <!-- Sample -->
 
     <div class="sample-area-wrap">
       <div class="sample-area">
         <img src="images/pro.png" alt="Text画像" class="sample-image">
     
         <div class="sample-list">
-          <h2>サンプル素材</h2>
+          <h2 class="font-english2">サンプル素材</h2>
           <ul>
             <li><a href="https://drive.google.com/drive/folders/11U4wwwW_9XGHK6y88HxTgie6_z8jtXgl?usp=drive_link" target="_blank">テキストサンプル素材（ZIP）</a></li>
         </div>
       </div>
     </div>
+    
+    <!-- 写真ギャラリー -->
+     <h2 class="font-english2 mihon">テキスト見本</h2>
+    <div class="photo-gallery">
+      <div class="gallery-viewer">
+        <button class="prev-btn">&lt;</button>
+        <img id="gallery-image" src="images/pt01.png" alt="pt01" />
+        <button class="next-btn">&gt;</button>
+      </div>
+      <div class="gallery-thumbnails">
+        <img class="thumbnail small-thumbnail" src="images/pt01.png" alt="pt01" data-index="0" />
+        <img class="thumbnail small-thumbnail" src="images/pt02.png" alt="pt02" data-index="1" />
+        <img class="thumbnail small-thumbnail" src="images/pt03.png" alt="pt03" data-index="2" />
+        <img class="thumbnail small-thumbnail" src="images/pt04.png" alt="pt04" data-index="3" />
+        <img class="thumbnail small-thumbnail" src="images/pt05.png" alt="pt05" data-index="4" />
+        <img class="thumbnail small-thumbnail" src="images/pt06.png" alt="pt06" data-index="5" />
+        <img class="thumbnail small-thumbnail" src="images/pt07.png" alt="pt07" data-index="6" />
+        <img class="thumbnail small-thumbnail" src="images/pt08.png" alt="pt08" data-index="7" />
+      </div>
+    </div>
+
+    <script>
+      const images = [
+        "images/pt01.png",
+        "images/pt02.png",
+        "images/pt03.png",
+        "images/pt04.png",
+        "images/pt05.png",
+        "images/pt06.png",
+        "images/pt07.png",
+        "images/pt08.png",
+      ];
+
+      let currentIndex = 0;
+
+      const galleryImage = document.getElementById("gallery-image");
+      const thumbnails = document.querySelectorAll(".thumbnail");
+      const prevBtn = document.querySelector(".prev-btn");
+      const nextBtn = document.querySelector(".next-btn");
+
+      function updateGallery(index) {
+        galleryImage.src = images[index];
+        thumbnails.forEach((thumb, i) => {
+          thumb.classList.toggle("active", i === index);
+        });
+      }
+
+      thumbnails.forEach((thumbnail) => {
+        thumbnail.addEventListener("click", (e) => {
+          currentIndex = parseInt(e.target.dataset.index, 10);
+          updateGallery(currentIndex);
+        });
+      });
+
+      prevBtn.addEventListener("click", () => {
+        currentIndex = (currentIndex - 1 + images.length) % images.length;
+        updateGallery(currentIndex);
+      });
+
+      nextBtn.addEventListener("click", () => {
+        currentIndex = (currentIndex + 1) % images.length;
+        updateGallery(currentIndex);
+      });
+
+      updateGallery(currentIndex);
+    </script>
     
       <main class="wrapper grid">
         <div class="item">
@@ -130,11 +201,11 @@
         ></iframe>
       </div> -->
     </section>
-
+<div class="risu">
     <a href="#top">
       <img src="images/筆りる.png" alt="トップへのロゴ" class="logo2" />
     </a>
-
+  </div>
     <footer class="page-footer">
       <div class="copyright">
         <small>&copy; 2025mio</small>
