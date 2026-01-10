@@ -200,7 +200,7 @@ iframe {
   background-size: contain; /* 写真全体を表示 */
   background-repeat: no-repeat;
   background-position: center 100px;
-  height: 100vh;        /* ← 固定pxやめる */
+  height: 70vh;        /* ← 固定pxやめる */
   margin-bottom: 0;   
 }
 
