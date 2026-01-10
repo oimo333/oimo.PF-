@@ -66,6 +66,11 @@ img {
   font-family: "Philosopher", sans-serif;
   font-weight: normal;
 }
+.font-english2 {
+  font-family: "Philosopher", sans-serif;
+
+}
+
 .page-title,
 .heading-large {
   font-size: 3rem;
@@ -103,6 +108,56 @@ img {
 iframe {
   width: 100%;
 }
+
+
+/* ーーーーーーーーーー切り替えボタンーーーーーーーーーーーーーーーーーーーーーーーーーー */
+.small-thumbnail {
+  width: 50px; /* サムネイルの幅を小さく設定 */
+  height: auto; /* アスペクト比を維持 */
+  margin: 5px; /* サムネイル間の余白 */
+}
+
+.prev-btn, .next-btn {
+  font-size: 20px; /* ボタン内の文字サイズを大きく */
+  padding: 10px 20px; /* ボタンの内側余白を広げる */
+  background-color: #007BFF; /* ボタンの背景色 */
+  color: #fff; /* ボタンの文字色 */
+  border: none; /* ボーダーを削除 */
+  border-radius: 5px; /* ボタンの角を丸く */
+  cursor: pointer; /* ホバー時にカーソルをポインターに */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* ボタンに影を追加 */
+  transition: background-color 0.3s, transform 0.2s; /* ホバー時のアニメーション */
+}
+
+.prev-btn:hover, .next-btn:hover {
+  background-color: #0056b3; /* ホバー時の背景色 */
+}
+
+.gallery-viewer {
+  position: relative; /* ボタンを画像の上に配置するために相対位置を設定 */
+  display: flex;
+  align-items: center; /* 垂直方向に中央揃え */
+  justify-content: center; /* 水平方向に中央揃え */
+}
+
+.prev-btn, .next-btn {
+  position: absolute; /* ボタンを画像の上に配置 */
+  top: 50%; /* 画像の真ん中に配置 */
+  transform: translateY(-50%); /* ボタンを垂直方向に中央揃え */
+  z-index: 10; /* ボタンを画像の上に表示 */
+}
+
+.prev-btn {
+  left: 10px; /* 左側の位置を調整 */
+}
+
+.next-btn {
+  right: 10px; /* 右側の位置を調整 */
+}
+
+/* ーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーー */
+
+
 
 /* ヘッダー
 ------------------------------- */
@@ -145,7 +200,7 @@ iframe {
   background-size: contain; /* 写真全体を表示 */
   background-repeat: no-repeat;
   background-position: center 100px;
-  margin-bottom: -600px;
+  margin-bottom: -35rem;
 }
 .about {
   max-width: 736px;
@@ -155,6 +210,7 @@ iframe {
 }
 .about p {
   margin-bottom: 3rem;
+  text-align: center;
 }
 
 .dt {
@@ -186,7 +242,7 @@ iframe {
 .table {
   color: #000;
   max-width: 100%;
-  margin: 0 auto;
+  margin: 50px auto;
   padding: 0 1.5rem 0 2rem;
   font-size: 1.5rem;
   width: 60%;
@@ -196,7 +252,7 @@ iframe {
   width: 15rem;
   height: auto;
   display: block;
-  margin: 10rem auto 0;
+  margin: 18rem auto 0;
 }
 .logo2 {
   width: 15rem;
@@ -208,7 +264,7 @@ iframe {
 ------------------------------- */
 .grid {
   display: grid;
-  margin: 15px;
+  margin-top: 60px;
   gap: 2rem 1.5rem;
   grid-template-columns: repeat(3, 1fr);
   text-align: center;
@@ -222,7 +278,7 @@ iframe {
   font-size: 0.875rem;
 }
 
-/* Pre */
+/* Pre----------------------- */
 .responsive-video {
   width: 100%; /* 幅を親要素いっぱいに広げる */
   height: auto; /* 高さを自動調整してアスペクト比を維持 */
@@ -233,6 +289,10 @@ iframe {
   text-align: center;
   color: #000;
 }
+
+
+
+
 /* フッター
 ------------------------------- */
 .page-footer {
@@ -264,14 +324,36 @@ iframe {
   background-color: rgb(133, 149, 255);
   text-align: center;
   padding: 2rem 0;
-  margin-top: 6rem;
+  margin-top: 3rem;
   color: #fff;
 }
+/* -----画像ギャラリー部分追加ここから----- */
+.mihon {
+  text-align: center;
+  margin-top: 50px;
+  font-size: 2rem;
+  color: #000;
+}
+
+
+#gallery-image {
+  max-width: 60%; /* 画像の最大幅を画面幅の80%に設定 */
+  height: auto; /* アスペクト比を維持 */
+  display: block; /* ブロック要素として中央揃え可能に */
+  margin: 0 auto; /* 画像を中央に配置 */
+}
+
+
+
+
+
 
 /* デスクトップ版
 ------------------------------- */
 @media (min-width: 800px) {
   /* 見出し */
+
+
   .page-title {
     font-size: 5rem;
   }
@@ -295,10 +377,23 @@ iframe {
     background-size: contain; /* 写真全体を表示 */
     background-repeat: no-repeat;
     background-position: center top;
-    margin-bottom: -200px;
+    margin-bottom: -18rem;
   }
 
-  .table {
+
+.profile-container{
+    color: #000;
+    max-width: 100%;
+    margin-top: 2rem;
+    margin: 0 auto;
+    padding: 0 1.5rem 0 2rem;
+    font-size: 1.5rem;
+    width: 60%;
+    text-align: left;
+}
+
+
+  /* .table {
     color: #000;
     max-width: 100%;
     margin: 0 auto;
@@ -306,7 +401,7 @@ iframe {
     font-size: 1.5rem;
     width: 60%;
     text-align: left;
-  }
+  } */
 
   .rogo1 {
     width: 300px;
@@ -315,9 +410,15 @@ iframe {
     margin: 0px auto 0;
   }
 
-  .about {
+  /* .about {
     margin: 4rem auto 0;
+  } */
+
+  .about {
+    max-width: 1000px; 
   }
+
+
 
   /* Pho */
   .cover-list {
@@ -325,18 +426,54 @@ iframe {
     /* background-image: url(images/a.png); */
   }
 
+  .responsive-video {
+    width: 80%; /* 画面幅が768px以上のときは幅を80%に */
+    max-width: 500px; /* 最大幅を500pxに制限 */
+    margin: 0 auto; /* 動画を中央に配置 */
+  }
+  
+  
+
   /* フッター */
   .page-footer {
     background-color: #ffffff;
-    padding-top: 12rem;
+
   }
   .info th {
     padding-left: 2.5rem;
   }
+  
+
+
+  .risu{
+  margin-top: 200px;
+  }
+
+/* ーーーーーーーーーー切り替えボタンーーーーーーーーーーーー */
+.small-thumbnail {
+  width: 50px; /* サムネイルの幅を小さく設定 */
+  height: auto; /* アスペクト比を維持 */
+  margin: 5px; /* サムネイル間の余白 */
 }
 
-.responsive-video {
-  width: 80%; /* 画面幅が768px以上のときは幅を80%に */
-  max-width: 500px; /* 最大幅を500pxに制限 */
-  margin: 0 auto; /* 動画を中央に配置 */
+.prev-btn, .next-btn {
+  font-size: 24px; /* ボタン内の文字サイズを大きく */
+  padding: 10px 20px; /* ボタンの内側余白を広げる */
+  background-color: #007BFF; /* ボタンの背景色 */
+  color: #fff; /* ボタンの文字色 */
+  border: none; /* ボーダーを削除 */
+  border-radius: 5px; /* ボタンの角を丸く */
+  cursor: pointer; /* ホバー時にカーソルをポインターに */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* ボタンに影を追加 */
+  transition: background-color 0.3s, transform 0.2s; /* ホバー時のアニメーション */
 }
+
+.prev-btn:hover, .next-btn:hover {
+  background-color: #0056b3; /* ホバー時の背景色 */
+
+
+}
+
+}
+/* ーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーー */
+
