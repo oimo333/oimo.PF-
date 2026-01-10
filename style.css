@@ -200,8 +200,12 @@ iframe {
   background-size: contain; /* 写真全体を表示 */
   background-repeat: no-repeat;
   background-position: center 100px;
-  margin-bottom: -35rem;
+  height: 100vh;        /* ← 固定pxやめる */
+  margin-bottom: 0;   
 }
+
+
+
 .about {
   max-width: 736px;
   padding: 0 1.5rem;
@@ -243,8 +247,8 @@ iframe {
   color: #000;
   max-width: 100%;
   margin: 50px auto;
-  padding: 0 1.5rem 0 2rem;
-  font-size: 1.5rem;
+  /* padding: 0 1.5rem 0 2rem; */
+  font-size: 1.3rem;
   width: 60%;
   text-align: left;
 }
@@ -252,8 +256,11 @@ iframe {
   width: 15rem;
   height: auto;
   display: block;
-  margin: 18rem auto 0;
+  margin: 1rem auto 0;  
+
 }
+
+
 .logo2 {
   width: 15rem;
   height: auto;
@@ -377,9 +384,11 @@ iframe {
     background-size: contain; /* 写真全体を表示 */
     background-repeat: no-repeat;
     background-position: center top;
-    margin-bottom: -18rem;
+    height: 90vh;
   }
 
+
+  
 
 .profile-container{
     color: #000;
@@ -405,9 +414,9 @@ iframe {
 
   .rogo1 {
     width: 300px;
-    height: auto;
+    /* height: auto; */
     display: block;
-    margin: 0px auto 0;
+    margin: 4rem auto 0;
   }
 
   /* .about {
