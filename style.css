@@ -184,9 +184,10 @@ iframe {
 /* ヘッダーカバー画像
 ------------------------------- */
 .cover {
-  background-size: cover;
-  background-position: center bottom;
-  height: 950px;
+  background-size: contain; /* 写真全体を表示 */
+  background-repeat: no-repeat;
+  background-position: center 100px;
+  height: 55vh;        /* ← 固定pxやめる */  
 }
 .cover2 {
   background-size: cover;
@@ -195,26 +196,25 @@ iframe {
 }
 /* HOME
 ------------------------------- */
+
 .cover-home {
   background-image: url(images/oimoスマホ.png);
-  background-size: contain; /* 写真全体を表示 */
-  background-repeat: no-repeat;
-  background-position: center 100px;
-  height: 70vh;        /* ← 固定pxやめる */
-  margin-bottom: 0;   
+
 }
 
 
 
 .about {
   max-width: 736px;
-  padding: 0 1.5rem;
+  padding: 0 1.2rem;
   margin: 3rem auto 0;
   color: rgb(0, 0, 0);
+  text-align: center;
+  
 }
 .about p {
   margin-bottom: 3rem;
-  text-align: center;
+  /* text-align: center; */
 }
 
 .dt {
@@ -246,20 +246,19 @@ iframe {
 .table {
   color: #000;
   max-width: 100%;
-  margin: 50px auto;
-  /* padding: 0 1.5rem 0 2rem; */
+  margin: 0px auto;
+  padding: 1.0rem;
   font-size: 1.3rem;
-  width: 60%;
+  width: 75%;
   text-align: left;
 }
+
 .rogo1 {
   width: 15rem;
   height: auto;
   display: block;
-  margin: 1rem auto 0;  
-
+  margin: -1rem auto 0;  /* ← 上に寄せる（ここがポイント） */
 }
-
 
 .logo2 {
   width: 15rem;
@@ -267,6 +266,13 @@ iframe {
   display: block;
   margin: 20px auto 0;
 }
+
+.table th {
+  vertical-align: top;
+  padding-top: 0.5rem; /* 微調整（なくてもOK） */
+}
+
+
 /* MENU
 ------------------------------- */
 .grid {
@@ -331,7 +337,6 @@ iframe {
   background-color: rgb(133, 149, 255);
   text-align: center;
   padding: 2rem 0;
-  margin-top: 3rem;
   color: #fff;
 }
 /* -----画像ギャラリー部分追加ここから----- */
@@ -351,7 +356,10 @@ iframe {
 }
 
 
-
+.gallery-thumbnails{
+  text-align: center;
+  margin-top: 30px;
+}
 
 
 
@@ -381,14 +389,16 @@ iframe {
   /* HOME */
   .cover-home {
     background-image: url(images/oimo.png);
+
+  }
+
+  .cover {
     background-size: contain; /* 写真全体を表示 */
     background-repeat: no-repeat;
     background-position: center top;
-    height: 90vh;
+    /* height: 90vh; */
   }
-
-
-  
+   
 
 .profile-container{
     color: #000;
@@ -412,16 +422,13 @@ iframe {
     text-align: left;
   } */
 
+
   .rogo1 {
     width: 300px;
-    /* height: auto; */
     display: block;
-    margin: 4rem auto 0;
+    margin: 4rem auto 0; /* ← DTでは従来通り */
   }
 
-  /* .about {
-    margin: 4rem auto 0;
-  } */
 
   .about {
     max-width: 1000px; 
