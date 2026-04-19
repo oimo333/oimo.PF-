@@ -63,17 +63,18 @@ img {
 
 /* 見出し */
 .font-english {
-  font-family: "Philosopher", sans-serif;
+  font-family:"Philosopher", sans-serif;
+  /* font-family: sans-serif,"Philosopher"; */
   font-weight: normal;
 }
 .font-english2 {
-  font-family: "Philosopher", sans-serif;
+  font-family: "Philosopher",sans-serif;
 
 }
 
 .page-title,
 .heading-large {
-  font-size: 3rem;
+  font-size: 2.5rem;
   text-align: center;
 }
 .page-title {
@@ -210,7 +211,6 @@ iframe {
   margin: 3rem auto 0;
   color: rgb(0, 0, 0);
   text-align: center;
-  
 }
 .about p {
   margin-bottom: 3rem;
@@ -277,7 +277,7 @@ iframe {
 ------------------------------- */
 .grid {
   display: grid;
-  margin-top: 60px;
+  /* margin-top: 60px; */
   gap: 2rem 1.5rem;
   grid-template-columns: repeat(3, 1fr);
   text-align: center;
@@ -361,6 +361,39 @@ iframe {
   margin-top: 30px;
 }
 
+/* 【Amazon購入】 */
+/* Amazonボタン装飾 */
+.amazon-link-container {
+  text-align: center;
+  margin: 1rem 0 3rem 0; /* 上下の余白（必要に応じて調整してください） */
+}
+
+.amazon-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #007BFF; /* ギャラリーのボタンと同じ青色 */
+  color: #fff;
+  font-size: 1.2rem;
+  font-weight: bold;
+  padding: 12px 30px;
+  border-radius: 8px; /* 角丸 */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* 軽い影 */
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+.amazon-button:hover {
+  background-color: #0056b3; /* マウスを乗せた時に少し暗い青にする */
+  transform: translateY(-2px); /* マウスを乗せた時に少し上に浮き上がる */
+}
+
+.amazon-icon {
+  margin-right: 8px;
+  font-size: 1.5rem;
+}
+
+
+
 
 
 /* デスクトップ版
@@ -373,7 +406,7 @@ iframe {
     font-size: 5rem;
   }
   .heading-large {
-    font-size: 4rem;
+    font-size: 3.5rem;
   }
 
   /* ヘッダー */
@@ -389,7 +422,6 @@ iframe {
   /* HOME */
   .cover-home {
     background-image: url(images/oimo.png);
-
   }
 
   .cover {
@@ -399,6 +431,16 @@ iframe {
     /* height: 90vh; */
   }
    
+
+
+
+  
+  .font-english {
+  font-family:"Philosopher", sans-serif;
+  font-weight: normal;
+
+}
+
 
 .profile-container{
     color: #000;
@@ -411,6 +453,10 @@ iframe {
     text-align: left;
 }
 
+
+ .profile-container .table {
+    font-size: 1.8rem;
+  }
 
   /* .table {
     color: #000;
@@ -492,4 +538,3 @@ iframe {
 
 }
 /* ーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーー */
-
